@@ -1,0 +1,2 @@
+const admin;
+const name;
