@@ -7,11 +7,7 @@
 
 ### operators
 
-- -
-- -
-- -
-- /
-- %
+... + , - , \* , / , %
 
 ```javascript
 const a = 2;
