@@ -36,3 +36,4 @@ console.log(a > b); // false
 - Comparisons
 - Logical operators
 - Numbers
+- Strings
