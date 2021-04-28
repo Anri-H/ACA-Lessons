@@ -5,9 +5,7 @@
 - Infinity, -Infinity
 - NaN
 
-### operators
-
-... + , - , \* , / , %
+#### Operators` + , - , \* , / , %
 
 ```javascript
 const a = 2;
