@@ -35,3 +35,4 @@ console.log(a > b); // false
 ## Homework 
 - Comparisons
 - Logical operators
+- Numbers

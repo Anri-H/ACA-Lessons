@@ -8,7 +8,7 @@ undefined === null; //false
 null == "\n0\n"; //false
 null === +"\n0\n"; //false
 
-alert(null || 2 || undefined); //2
+// alert(null || 2 || undefined); //2
 
 /*
 Write the code which asks for a login with prompt.
@@ -33,3 +33,18 @@ if (login === "") {
     alert("Canceled");
   } else alert("Wrong password");
 } else alert("I don't know you");
+
+
+
+// Create a function which prompts for a number until the visitor enters a valid numeric value.readNumber
+// The resulting value must be returned as a number.
+// The visitor can also stop the process by entering an empty line or pressing “CANCEL”. In that case, the function should return .null
+
+
+function readNumber() {
+  let num = prompt("Enter a number");
+  if (num === null || num === "") {
+    return null;
+  } else return +num;
+}
+//alert(readNumber());
