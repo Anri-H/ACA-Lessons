@@ -1,2 +1,3 @@
-const admin;
-const name;
+let admin;
+let name = "john";
+
