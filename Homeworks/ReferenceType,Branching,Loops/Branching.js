@@ -7,6 +7,8 @@ if (isNaN(number)) {
   console.log("odd");
 } else console.log("even");
 
+
+
 // Given a positive integer. Bring the last digit of the numberto the beginning. Print the new number. If the
 // last digit of the inserted numberis 0, numberremains the same.
 
@@ -17,6 +19,8 @@ if (lastNum !== "0") {
   arr.unshift(lastNum);
   console.log(arr.join(""));
 } else console.log(numChange);
+
+
 
 //Check if a numberis a multiple of 3, 5 or 7 and output the appropriate message.
 
