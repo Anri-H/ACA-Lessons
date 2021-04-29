@@ -17,14 +17,22 @@ if (result < 0) {
 //Insert a digit and a number. Check whetherthe digits contains in the number or not.
 
 function digitNumber(digit, number) {
-    number = number.toString();
-    for (let i = 0; i < number.length; i++) {
-        if (number[i] == digit) {
-            return console.log("Yes");
-    
-  }     
+  number = number.toString();
+  for (let i = 0; i < number.length; i++) {
+    if (number[i] == digit) {
+      return console.log("Yes");
+    }
+  }
+  return console.log("No");
+}
+digitNumber(7, 245);
 
-}
-return console.log("No")
-}
-digitNumber(7, 245)
+//Enter a number. Reverse its first and last digits. Print the new number.
+
+let reverseNu = 1423464635;
+ let reverseNum = reverseNu.toString().split("");
+let first = reverseNum.shift();
+let end = reverseNum.pop();
+reverseNum.push(first);
+reverseNum.unshift(end);
+console.log(reverseNum.join());
