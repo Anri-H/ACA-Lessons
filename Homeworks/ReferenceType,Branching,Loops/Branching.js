@@ -1,11 +1,11 @@
-// Task 1. Given a number. Print “odd” if the numberis odd and “even” if itʼs even.
+//Given a number. Print “odd” if the numberis odd and “even” if itʼs even.
 
-let number = +prompt("Please enter number ");
+let number = 34;
 if (isNaN(number)) {
-  alert("NaN");
+  console.log("NaN");
 } else if (number % 2 === 0) {
-  alert("odd");
-} else alert("even");
+  console.log("odd");
+} else console.log("even");
 
 // Given a positive integer. Bring the last digit of the numberto the beginning. Print the new number. If the
 // last digit of the inserted numberis 0, numberremains the same.
@@ -31,5 +31,3 @@ if (numberA % 3 === 0 && numberA % 5 === 0 && numberA % 7 === 0) {
 } else if (numberA % 3 === 0 && numberA % 7 === 0) {
   console.log(numberA + " is a multiple of 3 and 7");
 } else console.log(numberA + " is not a multiple of 3, 5 or 7");
-
-
