@@ -62,13 +62,13 @@ console.log(arrMatrix);
 //If there is not such a number, that find the index of the first element which is the closest to it.
 
 let chooseArr = [36, -12, 47, -58, 148, -55, -19, 10];
-let num = 49;
+let num = 47;
 
 let maxDiff;
 let index;
 for (let i = 0; i < chooseArr.length; i++) {
   if (chooseArr[i] === num) {
-    console.log(i);
+    index = i;
     break;
   }
   let minus = Math.abs(num - chooseArr[i]);
@@ -77,3 +77,5 @@ for (let i = 0; i < chooseArr.length; i++) {
     index = i;
   }
 }
+
+console.log(index);
