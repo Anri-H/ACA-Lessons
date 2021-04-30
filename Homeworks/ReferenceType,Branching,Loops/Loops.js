@@ -26,3 +26,36 @@ function digitNumber(digit, number) {
   return console.log("No");
 }
 digitNumber(7, 245);
+
+//Given a number n ( n >= 0 ) . Print n Fibonacci number.
+
+function fibonacci(val) {
+  let a = 1;
+  let b = 0;
+  let c = 0;
+  for (let i = 0; c <= val; i++) {
+    console.log(c);
+    c = a + b;
+    a = b;
+    b = c;
+  }
+}
+fibonacci(20);
+
+
+
+
+// Given a sentence with missing words and an array of words. Replace all ‘_ʼ in a sentence with the words
+// from the array.
+
+let sentences = "_, we have a _.";
+let arr = ["Houston", "problem"];
+let newStr = "";
+
+for (let i = 0; i < sentences.length; i++) {
+  if (sentences[i] === "_") {
+    newStr += arr.shift();
+  } else newStr += sentences[i]
+}
+
+console.log(newStr);

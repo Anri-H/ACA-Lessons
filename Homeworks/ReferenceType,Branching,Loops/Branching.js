@@ -45,18 +45,3 @@ function primeNum(num) {
 }
 console.log(primeNum(8));
 
-
-//Given a number n ( n >= 0 ) . Print n Fibonacci number.
-
-function fibonacci(val) {
-    let a = 1;
-    let b = 0;
-    let c = 0;
-    for (let i = 0; c <= val; i++) {
-      console.log(c);
-      c = a + b;
-      a = b;
-      b = c;
-    }
-  }
-  fibonacci(20);
