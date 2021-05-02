@@ -27,3 +27,14 @@ function cylinderSurface(r, h) {
   return 2 * p * r * r * h;
 }
 console.log(cylinderSurface(5, 10));
+
+function minNum(arr) {
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+console.log(minNum([12, 485, 4, 358]));
