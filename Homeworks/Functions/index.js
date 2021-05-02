@@ -21,3 +21,9 @@ function factorial(num) {
   return result;
 }
 console.log(factorial(5));
+
+function cylinderSurface(r, h) {
+  const p = 3.14;
+  return 2 * p * r * r * h;
+}
+console.log(cylinderSurface(5, 10));
