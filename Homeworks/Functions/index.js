@@ -12,3 +12,12 @@ function reverse(arr) {
   return result;
 }
 console.log(reverse([1, 2, 3, 4]));
+
+function factorial(num) {
+  let result = 1;
+  for (let i = 1; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log(factorial(5));
