@@ -11,3 +11,5 @@ I'm learning front end development
 - [Primitive Types](./Homeworks/PrimitiveTypes)
 
 - [ReferenceType Branching Loops](./Homeworks/ReferenceType,Branching,Loops)
+
+- [Type Coercion for Primitives](./Homeworks/Type Coercion for Primitives)
