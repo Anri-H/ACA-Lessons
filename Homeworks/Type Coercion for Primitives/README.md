@@ -1,6 +1,6 @@
 # Type Coercion for primitives
 
-— [Open following link and play Guess Test Understand](.index.js)
+— [Open following link and play Guess Test Understand](index.js)
 
 — What will be the result and why?
 
