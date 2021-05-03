@@ -85,7 +85,7 @@ if (product % sum === 0) {
 let num1 = 45;
 let num2 = 43;
 let num3 = -65;
-
+let sort
 if (num1 > num2 && num1 > num3) {
   
 }
