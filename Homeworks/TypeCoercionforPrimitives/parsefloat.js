@@ -16,5 +16,5 @@ for (let i = 0; i < str.length; i++) {
   } else res += str[i];
 }
 
-console.log(res);
+console.log(Number(res));
 console.log(parseFloat(" 24.5.43"));
