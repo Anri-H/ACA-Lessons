@@ -16,3 +16,11 @@ function difference(arr) {
   }
   return result;
 }
+
+function multiplication(arr) {
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      result *= arr[i];
+    }
+    return result;
+  }
