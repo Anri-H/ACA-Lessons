@@ -1,14 +1,20 @@
-let str = "35.56 ghd 43";
+let str = "     35.56.65 ghd 43";
 let res = "";
-
+let point;
 for (let i = 0; i < str.length; i++) {
-  if (isNaN(str[0])) {
-    res = NaN;
+  if (str[i] === " ") {
+    continue;
+  } else if (str[i] === "." && point === undefined) {
+    point = ".";
+    res += point;
   } else if (isNaN(str[i])) {
+    if (res[0] === undefined) {
+      res = NaN;
+      break;
+    }
     break;
-  } else if (str[i] === ".") {
-    res += ".";
   } else res += str[i];
 }
 
-console.log(str);
+console.log(res);
+console.log(parseFloat(" 24.5.43"));
