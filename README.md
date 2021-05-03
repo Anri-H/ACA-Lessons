@@ -12,4 +12,4 @@ I'm learning front end development
 
 - [ReferenceType Branching Loops](./Homeworks/ReferenceType,Branching,Loops)
 
-- [Type Coercion for Primitives](./Homeworks/Type Coercion for Primitives)
+- [Type Coercion for Primitives](./Homeworks/TypeCoercionForPrimitives)
