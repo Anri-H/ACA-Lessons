@@ -21,3 +21,6 @@
 
 
 — [Write logic that implements parseInt](parseint.js)
+
+
+— [Write logic that implements parseFloat](parsefloat.js.js)
