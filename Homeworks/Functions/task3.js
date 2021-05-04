@@ -8,13 +8,12 @@
 // If the phone number contains + symbol not as the first character, considerit as a badnumber.
 
 function phoneNumber(num) {
-  
-  let str = String(num).replace(/\s/g,'').split("");  
-    for (let i = 1; i < str.length; i++) {
-        if (str[i] === "+") {
-            return "bad number";
-        }         
+  let str = String(num).replace(/\s/g, "").split("");
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === "+") {
+      return "bad number";
     }
+  }
   if (str.length === 11) {
     if (str[0] ? "-" : "+") {
       str.shift();
@@ -26,7 +25,6 @@ function phoneNumber(num) {
   } else if (str.length === 10) {
     return "good";
   }
-  
 }
 
-console.log(phoneNumber("+4567911116"));
+console.log(phoneNumber("+456 7911116"));
