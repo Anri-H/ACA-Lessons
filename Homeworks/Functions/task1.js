@@ -8,6 +8,6 @@ function separate(arr) {
       odd.push(arr[i]);
     } else even.push(arr[i]);
   }
-  return odd;
+  return [odd, even];
 }
 console.log(separate([45, 12, 3, 6, 17, 0]));
