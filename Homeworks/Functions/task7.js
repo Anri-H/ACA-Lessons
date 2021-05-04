@@ -3,14 +3,14 @@
 // any group of fewerthan 3 chars at the end.
 
 function repeatThreeChars(str) {
-  str.split("");
   let newStr = "";
-  let index = 0;
-  for (let i = 0; i < str.length; i += 3) {
-    let first = str[i].shift();
-    index++;
+  let firstStr = str[0];
+  for (let i = 1; i <= str.length; i++) {
+    if (i % 3 === 0) {
+      newStr += firstStr;
+      firstStr = str[i];
+    } else newStr += str[i];
   }
-  return str;
+  return newStr;
 }
-console.log(repeatThreeChars("aweyoolp"));
-//kisat
+console.log(repeatThreeChars("aweyoolpf"));
