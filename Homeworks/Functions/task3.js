@@ -28,4 +28,4 @@ function phoneNumber(num) {
   
 }
 
-console.log(phoneNumber("+4567+91111"));
+console.log(phoneNumber("+456791111"));
