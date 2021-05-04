@@ -5,11 +5,12 @@
 function repeatThreeChars(str) {
   str.split("");
   let newStr = "";
-    let index = 0;
+  let index = 0;
   for (let i = 0; i < str.length; i += 3) {
     let first = str[i].shift();
-    index++
+    index++;
   }
   return str;
 }
 console.log(repeatThreeChars("aweyoolp"));
+//kisat
