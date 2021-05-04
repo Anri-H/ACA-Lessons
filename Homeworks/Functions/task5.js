@@ -2,21 +2,14 @@
 // sum.
 
 function findNumSum(str) {
-  let result = 0;
   let numbers = 0;
   let num = "";
   for (let i = 0; i < str.length; i++) {
     if (isNaN(str[i]) && !isNaN(str[i - 1])) {
       numbers += Number(num);
-      num = " ";
-    }
-
-    if (!isNaN(str[i]) && !isNaN(str[i - 1])) {
-      num += str[i];
+      num = "";
     }
     if (!isNaN(str[i])) {
-      num = " ";
-      numbers += Number(str[i]);
       num += str[i];
     }
   }
