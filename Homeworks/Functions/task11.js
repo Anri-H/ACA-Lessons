@@ -4,6 +4,9 @@
 
 function evenNum(num1, num2) {
   let res = "";
+  if (num2 - num1 > 100) {
+    return "Such numbers does not exist.";
+  }
   for (let i = num1; i <= num2; i++) {
     if (i % 2 === 0) {
       res += `${i}, `;
@@ -11,4 +14,4 @@ function evenNum(num1, num2) {
   }
   return res;
 }
-console.log(evenNum(19, 32))
+console.log(evenNum(19, 90));
