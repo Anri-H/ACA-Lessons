@@ -11,11 +11,12 @@ function spellOutNumber(num) {
   const numbers = hundred % 10;
   if (hundred !== 0) {
     result += `${numbersNum(tenTwenty)} hundreed `;
-  }
-  if (Math.floor(tens) === 1) {
-    result += tenTwentyNum(hundred % 100);
-  } else {
-    result += tensNum(Math.floor(tens)) + numbersNum(numbers);
+    if (Math.floor(tens) === 1) {
+      result += tenTwentyNum(hundred % 100);
+    } else {
+      result += tensNum(Math.floor(tens)) + numbersNum(numbers);
+    }
+    result += "thousand";
   }
 
   return result;
@@ -122,4 +123,4 @@ function numbersNum(num) {
       break;
   }
 }
-console.log(spellOutNumber(657680));
+console.log(spellOutNumber(567680));
