@@ -21,103 +21,105 @@ function spellOutNumber(num) {
   return result;
 }
 
-// function hundredNum(num) {
-//   result = "";
-
-//   if (hundred === 1) {
-//     result += "one hundred ";
-//   } else if (hundred === 2) {
-//     result += "two hundred ";
-//   } else if (hundred === 3) {
-//     result += "three hundred ";
-//   } else if (hundred === 4) {
-//     result += "four hundred ";
-//   } else if (hundred === 5) {
-//     result += "five hundred ";
-//   } else if (hundred === 6) {
-//     result += "six hundred ";
-//   } else if (hundred === 7) {
-//     result += "seven hundred ";
-//   } else if (hundred === 8) {
-//     result += "eight hundred ";
-//   } else if (hundred === 9) {
-//     result += "nine hundred ";
-//   }
-//   return result;
-// }
-
 function tensNum(num) {
-  result = "";
+  switch (num) {
+    case 2:
+      return "twenty ";
 
-  if (num === 2) {
-    result += "twenty ";
-  } else if (num === 3) {
-    result += "thirty ";
-  } else if (num === 4) {
-    result += "forty ";
-  } else if (num === 5) {
-    result += "fifty ";
-  } else if (num === 6) {
-    result += "sixty ";
-  } else if (num === 7) {
-    result += "seventy ";
-  } else if (num === 8) {
-    result += "eighty ";
-  } else if (num === 9) {
-    result += "ninety ";
+    case 3:
+      return "thirty ";
+
+    case 4:
+      return "forty ";
+
+    case 5:
+      return "fifty ";
+
+    case 6:
+      return "sixty ";
+
+    case 7:
+      return "seventy ";
+
+    case 8:
+      return "eighty ";
+
+    case 9:
+      return "ninety ";
+
+    default:
+      break;
   }
-  return result;
 }
 
 function tenTwentyNum(num) {
-  result = "";
+  switch (num) {
+    case 10:
+      return "ten ";
 
-  if (num === 10) {
-    result += "ten ";
-  } else if (num === 11) {
-    result += "eleven ";
-  } else if (num === 12) {
-    result += "twelve ";
-  } else if (num === 13) {
-    result += "thirteen ";
-  } else if (num === 14) {
-    result += "fourteen ";
-  } else if (num === 15) {
-    result += "fifteen ";
-  } else if (num === 16) {
-    result += "sixteen ";
-  } else if (num === 17) {
-    result += "seventeen ";
-  } else if (num === 18) {
-    result += "eighteen ";
-  } else if (num === 19) {
-    result += "nineteen ";
+    case 11:
+      return "eleven ";
+
+    case 12:
+      return "twelve ";
+
+    case 13:
+      return "thirteen ";
+
+    case 14:
+      return "fourteen ";
+
+    case 15:
+      return "fifteen ";
+
+    case 16:
+      return "sixteen ";
+
+    case 17:
+      return "seventeen ";
+
+    case 18:
+      return "eighteen ";
+
+    case 19:
+      return "nineteen ";
+
+    default:
+      break;
   }
-  return result;
 }
 
 function numbersNum(num) {
-  result = "";
+  switch (num) {
+    case 1:
+      return "one ";
 
-  if (num === 1) {
-    result += "one ";
-  } else if (num === 2) {
-    result += "two ";
-  } else if (num === 3) {
-    result += "three ";
-  } else if (num === 4) {
-    result += "four ";
-  } else if (num === 5) {
-    result += "five ";
-  } else if (num === 6) {
-    result += "six ";
-  } else if (num === 7) {
-    result += "seven ";
-  } else if (num === 8) {
-    result += "eight ";
-  } else if (num === 9) {
-    result += "nine ";
+    case 2:
+      return "two ";
+
+    case 3:
+      return "three ";
+
+    case 4:
+      return "four ";
+
+    case 5:
+      return "five ";
+
+    case 6:
+      return "six ";
+
+    case 7:
+      return "seven ";
+
+    case 8:
+      return "eight ";
+
+    case 9:
+      return "nine ";
+
+    default:
+      break;
   }
-  return result;
 }
 console.log(spellOutNumber(657680));
