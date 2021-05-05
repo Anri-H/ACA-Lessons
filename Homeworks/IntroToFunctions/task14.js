@@ -7,14 +7,15 @@ function biggestNegativeNum(arr) {
   for (let i = 0; i < arr.length; i++) {
     let negativeNumber;
     for (let j = 0; j < arr[i].length; j++) {
-      if (arr[i][j] === undefined) {
+      let itsNumber = arr[i][j];
+      if (itsNumber === undefined) {
         return "Invalid Argument";
       }
       if (
-        (negativeNumber === undefined && arr[i][j] < 0) ||
-        (0 > arr[i][j] && arr[i][j] > negativeNumber)
+        (negativeNumber === undefined && itsNumber < 0) ||
+        (itsNumber < 0 && negativeNumber < itsNumber)
       ) {
-        negativeNumber = arr[i][j];
+        negativeNumber = itsNumber;
       }
     }
     if (negativeNumber !== undefined) {

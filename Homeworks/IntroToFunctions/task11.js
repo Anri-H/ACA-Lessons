@@ -17,7 +17,7 @@ function evenNum(num1, num2) {
       }
     }
     if (strNum % 2 === 0) {
-      res += `${strNum} `;
+      res += strNum;
     }
   }
   if (res === "") {
