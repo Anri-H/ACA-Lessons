@@ -6,19 +6,23 @@ function evenNum(num1, num2) {
   let res = "";
 
   for (let i = num1; i <= num2; i++) {
-    for (let j = 0; j < toString(i).length; j++) {
-      if (toString(i)[j] % 2 !== 0) {
-        continue;
-      }
-      if (i % 2 === 0) {
-        res += `${i}, `;
+    let num = String(i);
+    let strNum = "";
+    for (let j = 0; j < num.length; j++) {
+      if (num[j] % 2 === 0) {
+        strNum += num[j];
+      } else {
+        strNum = "";
+        break;
       }
     }
-    if (res === "") {
-      return "Such numbers does not exist.";
+    if (strNum % 2 === 0) {
+      res += `${strNum} `;
     }
   }
-
-  return res;
+  if (res === "") {
+    return "Such numbers does not exist.";
+  }
+  return res.trim();
 }
 console.log(evenNum(150, 230));
