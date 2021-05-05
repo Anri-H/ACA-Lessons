@@ -5,112 +5,119 @@ function spellOutNumber(num) {
   if (num >= 1000000 && num < 0) {
     return "Your number must be from 0-999999";
   }
-  if (Math.floor(Math.floor(num / 1000) / 100) % 10 !== 0) {
-    result += hundred(num);
+  const hundred = Math.floor(num / 1000);
+  const tenTwenty = Math.floor(hundred / 100);
+  const tens = (hundred % 100) / 10;
+  const numbers = hundred % 10;
+  if (hundred !== 0) {
+    result += `${numbersNum(tenTwenty)} hundreed `;
   }
-  if (Math.floor((Math.floor(num / 1000) % 100) / 10) !== (0 || 1)) {
-    result += tens(num);
+  if (Math.floor(tens) === 1) {
+    result += tenTwentyNum(hundred % 100);
+  } else {
+    result += tensNum(Math.floor(tens)) + numbersNum(numbers);
   }
-  Math.floor((Math.floor(num / 1000) % 100) / 10) === 1
-    ? (result += tenTwenty(num))
-    : (result += numbers(num));
 
   return result;
 }
 
-function hundred(num) {
-  result = "";
-  if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 1) {
-    result += "one hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 2) {
-    result += "two hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 3) {
-    result += "three hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 4) {
-    result += "four hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 5) {
-    result += "five hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 6) {
-    result += "six hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 7) {
-    result += "seven hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 8) {
-    result += "eight hundred ";
-  } else if (Math.floor(Math.floor(num / 1000) / 100) % 10 === 9) {
-    result += "nine hundred ";
-  }
-  return result;
-}
+// function hundredNum(num) {
+//   result = "";
 
-function tens(num) {
+//   if (hundred === 1) {
+//     result += "one hundred ";
+//   } else if (hundred === 2) {
+//     result += "two hundred ";
+//   } else if (hundred === 3) {
+//     result += "three hundred ";
+//   } else if (hundred === 4) {
+//     result += "four hundred ";
+//   } else if (hundred === 5) {
+//     result += "five hundred ";
+//   } else if (hundred === 6) {
+//     result += "six hundred ";
+//   } else if (hundred === 7) {
+//     result += "seven hundred ";
+//   } else if (hundred === 8) {
+//     result += "eight hundred ";
+//   } else if (hundred === 9) {
+//     result += "nine hundred ";
+//   }
+//   return result;
+// }
+
+function tensNum(num) {
   result = "";
-  if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 2) {
+
+  if (num === 2) {
     result += "twenty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 3) {
+  } else if (num === 3) {
     result += "thirty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 4) {
+  } else if (num === 4) {
     result += "forty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 5) {
+  } else if (num === 5) {
     result += "fifty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 6) {
+  } else if (num === 6) {
     result += "sixty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 7) {
+  } else if (num === 7) {
     result += "seventy ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 8) {
+  } else if (num === 8) {
     result += "eighty ";
-  } else if (Math.floor((Math.floor(num / 1000) % 100) / 10) === 9) {
+  } else if (num === 9) {
     result += "ninety ";
   }
   return result;
 }
 
-function tenTwenty(num) {
+function tenTwentyNum(num) {
   result = "";
-  if (Math.floor(Math.floor(num / 1000) % 100) === 10) {
+
+  if (num === 10) {
     result += "ten ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 11) {
+  } else if (num === 11) {
     result += "eleven ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 12) {
+  } else if (num === 12) {
     result += "twelve ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 13) {
+  } else if (num === 13) {
     result += "thirteen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 14) {
+  } else if (num === 14) {
     result += "fourteen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 15) {
+  } else if (num === 15) {
     result += "fifteen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 16) {
+  } else if (num === 16) {
     result += "sixteen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 17) {
+  } else if (num === 17) {
     result += "seventeen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 18) {
+  } else if (num === 18) {
     result += "eighteen ";
-  } else if (Math.floor(Math.floor(num / 1000) % 100) === 19) {
+  } else if (num === 19) {
     result += "nineteen ";
   }
   return result;
 }
 
-function numbers(num) {
+function numbersNum(num) {
   result = "";
-  if (Math.floor(Math.floor(num / 1000)) % 10 === 1) {
+
+  if (num === 1) {
     result += "one ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 2) {
+  } else if (num === 2) {
     result += "two ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 3) {
+  } else if (num === 3) {
     result += "three ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 4) {
+  } else if (num === 4) {
     result += "four ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 5) {
+  } else if (num === 5) {
     result += "five ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 6) {
+  } else if (num === 6) {
     result += "six ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 7) {
+  } else if (num === 7) {
     result += "seven ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 8) {
+  } else if (num === 8) {
     result += "eight ";
-  } else if (Math.floor(Math.floor(num / 1000)) % 10 === 9) {
+  } else if (num === 9) {
     result += "nine ";
   }
   return result;
 }
-console.log(spellOutNumber(814080));
+console.log(spellOutNumber(657680));

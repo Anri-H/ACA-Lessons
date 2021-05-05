@@ -6,16 +6,21 @@ function evenNum(num1, num2) {
   let res = "";
 
   for (let i = num1; i <= num2; i++) {
-    if (("" + i)[0] % 2 !== 0) {
-      continue;
+    for (let j = 0; j < toString(i).length; j++) {
+      
+      if (toString(i)[j] % 2 !== 0) {
+        continue;
+      }
+      if (i % 2 === 0) {
+        res += `${i}, `;
+      }
     }
-    if (i % 2 === 0) {
-      res += `${i}, `;
+    if (res === "") {
+      return "Such numbers does not exist.";
     }
-  }
-  if (res === "") {
-    return "Such numbers does not exist.";
-  }
+    }
+    
+    
   return res;
 }
-console.log(evenNum(36, 190));
+console.log(evenNum(150, 230));

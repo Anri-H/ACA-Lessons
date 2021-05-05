@@ -5,12 +5,12 @@
 function repeatThreeChars(str) {
   let newStr = "";
   let firstStr = str[0];
-  for (let i = 1; i <= str.length; i++) {
+  for (let i = 1; i < str.length; i++) {
     if (i % 3 === 0) {
-      newStr += firstStr;
+      newStr += firstStr;      
       firstStr = str[i];
     } else newStr += str[i];
   }
   return newStr;
 }
-console.log(repeatThreeChars("aweyoolpf"));
+console.log(repeatThreeChars("aweyoolp"));
