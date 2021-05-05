@@ -2,17 +2,13 @@
 // given value create an array.
 
 function invertKey(obj) {
-    
-
-const res ={}
-for ( const key in obj) {
+  const res = {};
+  for (const key in obj) {
     if (!(obj[key] in res)) {
-        res[obj[key]] =key;
-    }else res[obj[key]] = [...res[obj[key]], key]
-    
-}
-return res
+      res[obj[key]] = key;
+    } else res[obj[key]] = [...res[obj[key]], key];
+  }
+  return res;
 }
 
-console.log(invertKey({ a: "1", b: "2", c: "2", d: "2" }))
-
+console.log(invertKey({ a: "1", b: "2", c: "2", d: "2" }));

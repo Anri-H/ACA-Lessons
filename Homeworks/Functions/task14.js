@@ -6,7 +6,6 @@ function biggestNegativeNum(arr) {
   let result = 1;
   for (let i = 0; i < arr.length; i++) {
     let negativeNumber;
-
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] === undefined) {
         return "Invalid Argument";
@@ -22,8 +21,9 @@ function biggestNegativeNum(arr) {
       //   }
     }
     if (negativeNumber !== undefined) {
+        result *= negativeNumber;
     }
-    result *= negativeNumber;
+    
   }
 
   return result;

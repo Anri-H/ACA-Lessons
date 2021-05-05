@@ -7,7 +7,6 @@ function evenNum(num1, num2) {
 
   for (let i = num1; i <= num2; i++) {
     for (let j = 0; j < toString(i).length; j++) {
-      
       if (toString(i)[j] % 2 !== 0) {
         continue;
       }
@@ -18,9 +17,8 @@ function evenNum(num1, num2) {
     if (res === "") {
       return "Such numbers does not exist.";
     }
-    }
-    
-    
+  }
+
   return res;
 }
 console.log(evenNum(150, 230));
