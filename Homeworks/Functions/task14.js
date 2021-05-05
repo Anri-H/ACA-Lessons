@@ -12,7 +12,7 @@ function biggestNegativeNum(arr) {
       }
       if (
         (negativeNumber === undefined && arr[i][j] < 0) ||
-        0 > arr[i][j] > negativeNumber
+        (0 > arr[i][j] && arr[i][j] > negativeNumber)
       ) {
         negativeNumber = arr[i][j];
       }
@@ -21,9 +21,8 @@ function biggestNegativeNum(arr) {
       //   }
     }
     if (negativeNumber !== undefined) {
-        result *= negativeNumber;
+      result *= negativeNumber;
     }
-    
   }
 
   return result;
