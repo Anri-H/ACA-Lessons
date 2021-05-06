@@ -15,3 +15,5 @@ I'm learning front end development
 - [Type Coercion for Primitives](./Homeworks/TypeCoercionforPrimitives)
 
 - [Intro to Functions](./Homeworks/IntroToFunctions)
+
+- [Scope and Closure](./Homeworks/Closure)
