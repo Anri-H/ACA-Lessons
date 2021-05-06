@@ -1,0 +1,1 @@
+//Given an array of numbers. Find the sum of numbersʼ quadratic which are even.
