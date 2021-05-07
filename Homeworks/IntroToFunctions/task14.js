@@ -3,7 +3,7 @@
 // Check that items of the given array are arrays.
 
 function biggestNegativeNum(arr) {
-  let result = 1;
+  let result;
   for (let i = 0; i < arr.length; i++) {
     let negativeNumber;
     for (let j = 0; j < arr[i].length; j++) {
@@ -19,17 +19,16 @@ function biggestNegativeNum(arr) {
       }
     }
     if (negativeNumber !== undefined) {
-      result *= negativeNumber;
+      !result ? (result = negativeNumber) : (result *= negativeNumber);
     }
   }
-
-  return result;
+  return result ? result : "No negatives";
 }
 
 console.log(
   biggestNegativeNum([
     [2, -9, -3, 0],
     [1, 2],
-    [-4, -11, 0],
+    [-4, 11, 0],
   ])
 );
