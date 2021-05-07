@@ -13,4 +13,4 @@ function repeatThreeChars(str) {
   }
   return newStr;
 }
-console.log(repeatThreeChars("aweyoolpmn"));
+console.log(repeatThreeChars("aweyoolpm"));

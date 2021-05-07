@@ -19,7 +19,7 @@ if (result < 0) {
 function digitNumber(digit, number) {
   number = number.toString();
   for (let i = 0; i < number.length; i++) {
-    if (number[i] == digit) {
+    if (+number[i] === digit) {
       return console.log("Yes");
     }
   }

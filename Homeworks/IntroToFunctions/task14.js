@@ -8,7 +8,7 @@ function biggestNegativeNum(arr) {
     let negativeNumber;
     for (let j = 0; j < arr[i].length; j++) {
       let itsNumber = arr[i][j];
-      if (itsNumber === undefined) {
+      if (Array.isArray(itsNumber)) {
         return "Invalid Argument";
       }
       if (
