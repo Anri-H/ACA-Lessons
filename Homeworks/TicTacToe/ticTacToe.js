@@ -28,10 +28,10 @@ function random() {
       break;
     }
   }
-  cords(border);
+  check(border);
 }
 
-function cords() {
+function check() {
   // X-ի հաղթող տարբերակներ
   if (border[0][0] === "X" && border[0][1] === "X" && border[0][2] === "X") {
     return "Player X win";
