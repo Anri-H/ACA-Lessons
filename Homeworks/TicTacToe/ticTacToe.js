@@ -7,15 +7,17 @@ for (let i = 0; i < 3; i++) {
 }
 
 function random() {
-  const randomCord = () => Math.round(Math.random() * 2); 
+  const randomCord = () => Math.round(Math.random() * 2);
   for (;;) {
-    const cord1 = randomCord();
-    const cord2 = randomCord();
-    if (border[cord1][cord2] === "_") {
-      border[cord1][cord2] = "X";
-      console.log(border);
-      break;
-    }
+    if (border.indexOf("_")) {
+      const cord1 = randomCord();
+      const cord2 = randomCord();
+      if (border[cord1][cord2] === "_") {
+        border[cord1][cord2] = "X";
+        console.log(border);
+        break;
+      }
+    } else return "haxtox chka";
   }
   for (;;) {
     const cord1 = randomCord();
