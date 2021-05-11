@@ -11,3 +11,29 @@ function sumOver18(arr) {
 }
 
 console.log(sumOver18(arr));
+
+//Write a function which calculates average age of users.
+
+const users = [
+  {
+    username: "Yuri Gagarin",
+    lang: "ru",
+    age: 56,
+  },
+  {
+    username: "Nil Armstrong",
+    lang: "ENG",
+    age: 54,
+  },
+];
+
+function getAverageAge(arr) {
+  let users = arr.length;
+  let sum = arr.reduce((acc, item) => {
+    return acc + item.age;
+  }, 0);
+
+  return sum / users;
+}
+
+console.log(getAverageAge(users));
