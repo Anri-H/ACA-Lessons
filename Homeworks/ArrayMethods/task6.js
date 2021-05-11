@@ -18,3 +18,14 @@ function getUserNames(arr) {
 }
 
 console.log(getUserNames(users));
+
+
+//Write a function which returns array of lengths of user names
+
+function getUserNameLengths(arr) {
+    return arr.map((el) => {
+        return el.username.length;
+      });
+}
+
+console.log(getUserNameLengths(users))
