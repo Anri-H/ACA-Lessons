@@ -17,3 +17,7 @@ I'm learning front end development
 - [Intro to Functions](./Homeworks/IntroToFunctions)
 
 - [Scope and Closure](./Homeworks/Closure)
+
+- [Type Coercion for Primitives](./Homeworks/TypeCoercionforPrimitives)
+
+- [Array Methods](./Homeworks/ArrayMethods)
