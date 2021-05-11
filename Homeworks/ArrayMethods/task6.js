@@ -19,13 +19,22 @@ function getUserNames(arr) {
 
 console.log(getUserNames(users));
 
-
 //Write a function which returns array of lengths of user names
 
 function getUserNameLengths(arr) {
-    return arr.map((el) => {
-        return el.username.length;
-      });
+  return arr.map((el) => {
+    return el.username.length;
+  });
 }
 
-console.log(getUserNameLengths(users))
+console.log(getUserNameLengths(users));
+
+// - Write a function which parses string integers. If it's not possible to
+// parse, then add null
+
+function parseInteger(arr) {
+  return arr.map((el) => {
+    return parseInt(el) ? parseInt(el) : null;
+  });
+}
+console.log(parseInteger(["1", "px", "2323"]));
