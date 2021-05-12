@@ -1,4 +1,4 @@
-const array = [47, 21, 77];
+const array = [];
 
 function every(arr, func) {
   for (let index = 0; index < arr.length; index++) {
