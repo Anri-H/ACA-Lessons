@@ -4,7 +4,7 @@ function filter(arr, func) {
   let newArr = [];
   for (let index = 0; index < arr.length; index++) {
     const element = array[index];
-    if (func(element)) {
+    if (func(element, index, arr)) {
       newArr.push(element);
     }
   }
