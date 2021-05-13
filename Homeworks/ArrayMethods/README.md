@@ -2,11 +2,12 @@
 
 ## Mutable and Immutable methods
 
-        A mutable object is an object whose state can be modified or changed over time. An immutable object, on the other hand, is an object whose state cannot be modified after it is created. Well, that’s how the textbook defines mutable and immutable objects. 
+A mutable object is an object whose state can be modified or changed over time. An immutable object, on the other hand, is an object whose state cannot be modified after it is created. Well, that’s how the textbook defines mutable and immutable objects. 
 
 ## ForEach
 
-        The arr.forEach method allows to run a function for every element of the array.
+The arr.forEach method allows to run a function for every element of the array.
+
 The syntax is:
 ```javascript 
 arr.forEach(function(item, index, array) {
