@@ -1,12 +1,16 @@
 const array = ["hello", "javascript", 77];
-function find(arr, str) {
+function find(arr, fn) {
   for (let index = 0; index < arr.length; index++) {
     const element = array[index];
-    if (element === str) {
-      return element;
+    if (fn(element, index, array)) {
+      return true;
     }
   }
-  return undefined;
+  return false;
 }
 
-console.log(find(array, 77));
+console.log(
+  find(array, (f) => {
+    return f === 77;
+  })
+);
