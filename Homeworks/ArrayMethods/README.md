@@ -17,7 +17,7 @@ arr.forEach(function(item, index, array) {
 
 ## Slice
 
-        It returns a new array copying to it all items from index to (not including ). Both and can be negative, in that case position from array end is assumed.startendendstartend
+It returns a new array copying to it all items from index to (not including ). Both and can be negative, in that case position from array end is assumed.
 
 The syntax is:
 ```javascript 
@@ -27,7 +27,7 @@ arr.slice([start], [end])
 
 ## Splice
 
-         The arr.splice method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.
+The arr.splice method is a swiss army knife for arrays. It can do everything: insert, remove and replace elements.
 
 The syntax is:
 
@@ -38,9 +38,9 @@ arr.splice(start[, deleteCount, elem1, ..., elemN])
 
 ## Find & FindIndex
 
-         Imagine we have an array of objects. How do we find an object with the specific condition?
+Imagine we have an array of objects. How do we find an object with the specific condition?
 
-        Here the arr.find(fn) method comes in handy.
+Here the arr.find(fn) method comes in handy.
 
 The syntax is:
 
@@ -52,12 +52,12 @@ arr.find(function(item, index, array) {
 ```
 
 
-        The arr.findIndex method is essentially the same, but it returns the index where the element was found instead of the element itself and is returned when nothing is found.-1
+The arr.findIndex method is essentially the same, but it returns the index where the element was found instead of the element itself and is returned when nothing is found.-1
 
 
 ## Map
 
-        It calls the function for each element of the array and returns the array of results.
+It calls the function for each element of the array and returns the array of results.
 
 The syntax is:
 
@@ -70,10 +70,11 @@ arr.map(function(item, index, array) {
 
 ## Filter
 
-        The method looks for a single (first) element that makes the function return .findtrue
+The method looks for a single (first) element that makes the function return .findtrue
 
-        If there may be many, we can use arr.filter(fn).
+If there may be many, we can use arr.filter(fn).
         
+The syntax is:
 
 ```javascript 
 arr.filter(function(item, index, array) {
@@ -82,12 +83,12 @@ arr.filter(function(item, index, array) {
 });
 ```
 
-        The syntax is similar to , but returns an array of all matching elements:findfilter
+The syntax is similar to , but returns an array of all matching elements:findfilter
 
 
 ## Reduce
 
-        They are used to calculate a single value based on the array.
+They are used to calculate a single value based on the array.
 
 The syntax is:
 
