@@ -1,11 +1,12 @@
 //Write function that will do reverse operation for Object.entries
 
 function fromPairs(arr) {
-  let newObj = {};
-  arr.foreach(([key, value]) => {
-    newObj[key], newObj[value];
-  });
-  return newObj;
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+      const [key, value] = arr[i];
+      obj[key] = value;
+  }
+  return obj;
 }
 
 console.log(
@@ -14,3 +15,5 @@ console.log(
     ["b", 2],
   ])
 );
+
+
