@@ -1,11 +1,11 @@
 //Write function that will group by some rule
 
 function groupBy(arr, func) {
-  let obj = {};
+  const obj = {};
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     const key = func(element);
-    let values = arr.filter((el) => key === func(el));
+    const values = arr.filter((el) => key === func(el));
     obj[key] = values;
   }
   return obj;
