@@ -1,7 +1,7 @@
 //Write function that will zip arrays into object
 
 function zipObject(key, val) {
-  let obj = key.reduce((acc, el, index) => {
+  const obj = key.reduce((acc, el, index) => {
     if (val[index] === undefined) {
       val[index] = null;
     }
@@ -12,3 +12,4 @@ function zipObject(key, val) {
 }
 
 console.log(zipObject(["a", "b", "c"], [1, 2]));
+
