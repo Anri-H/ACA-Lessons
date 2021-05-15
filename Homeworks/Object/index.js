@@ -5,10 +5,9 @@ let users = [
 ];
 
 function groupById(users) {
-  users.reduce((acc, item) => {
+  return users.reduce((acc, item) => {
     acc[item.id] = item;
     return acc;
   }, {});
 }
 console.log(groupById(users));
-
