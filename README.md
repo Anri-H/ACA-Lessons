@@ -22,4 +22,4 @@ I'm learning front end development
 
 - [Array Methods](./Homeworks/ArrayMethods)
 
-- [Object](./Homeworks/Object\JSON)
+- [Object](./Homeworks/Object)
