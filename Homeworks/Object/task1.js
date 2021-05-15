@@ -2,10 +2,9 @@
 
 function fromPairs(arr) {
   let obj = {};
-  for (let i = 0; i < arr.length; i++) {
-      const [key, value] = arr[i];
+  arr.forEach(([key, value]) => {
       obj[key] = value;
-  }
+  });   
   return obj;
 }
 
