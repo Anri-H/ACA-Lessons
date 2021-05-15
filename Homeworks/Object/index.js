@@ -13,7 +13,7 @@ function groupById(users) {
 console.log(groupById(users));
 
 function splitMulti(str, tokens){
-    var tempChar = tokens[0]; 
+    let tempChar = tokens[0]; 
     for(var i = 1; i < tokens.length; i++){
         str = str.split(tokens[i]).join(tempChar);
     }
