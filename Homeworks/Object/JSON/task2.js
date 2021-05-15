@@ -1,11 +1,11 @@
 //Write functions that willreturn head and tail of Array
 
-function getTail([head, ...tail]) {
+function getTail([, ...tail]) {
   return tail;
 }
 
-function getHead(arr) {
-    return arr[0]
+function getHead([head]) {
+    return head
 }
 
 console.log(getHead([1, 2, 3]))
