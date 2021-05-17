@@ -2,10 +2,9 @@
 // Each day name must be one of the following strings: "Sunday", "Monday", "Tuesday", "Wednesday",
 // "Thursday", "Friday", or "Saturday".
 
-function getDay(str){
-    return new Date(str)
-
+function getDay(date) {
+  const days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+  return days[date.getDay()];
 }
 
-
-console.log(getDay("12/07/2016"))
+console.log(getDay("12/07/2016"));
