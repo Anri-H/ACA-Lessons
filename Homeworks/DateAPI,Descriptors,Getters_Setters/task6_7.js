@@ -3,8 +3,17 @@
 // "Thursday", "Friday", or "Saturday".
 
 function getDay(date) {
-  const days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+  date = new Date(date);
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   return days[date.getDay()];
 }
 
-console.log(getDay("12/07/2016"));
+console.log(getDay("03/25/2016"));
