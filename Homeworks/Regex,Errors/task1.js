@@ -1,15 +1,8 @@
-
-
-
-
 try {
-    
-function reverseString(s) {
- return    s.split().reverse().join();
-}
-reverseString()
-
-}
-catch(error) {
-    console.error("error");
+  function reverseString(s) {
+    return s.split().reverse().join();
+  }
+  reverseString();
+} catch (error) {
+  throw "Error";
 }
