@@ -25,3 +25,5 @@ I'm learning front end development
 - [Object](./Homeworks/Object)
 
 - [DateAPI, Descriptors, Getters_Setters](./Homeworks/DateAPI,Descriptors,Getters_Setters)
+
+- [Regex, Errors](./Homeworks/Regex,Errors)
