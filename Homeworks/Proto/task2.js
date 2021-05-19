@@ -5,9 +5,12 @@
 // If a plane lands, its isFlying property is set to false.
 
 const Airplane = {
-  takeOff: () => true,
-  land: () => false,
+  takeOff: () => (this.isFlaying = true),
+  land: () => (this.isFlaying = false),
 };
 
-const mig = Object.create(Airplane);
-console.log(mig.land());
+const mig = {
+  isFlaying: false,
+  __proto__: Airplane,
+};
+console.log(mig.takeOff());
