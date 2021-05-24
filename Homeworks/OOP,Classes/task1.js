@@ -4,9 +4,6 @@ class Author {
     this.email = email;
     this.gender = gender;
   }
-  set name(val) {
-    throw Error("You can't changed Author name");
-  }
   get name() {
     return this._name;
   }
@@ -29,32 +26,41 @@ class Book {
     return `${this._title}`;
   }
   set title(val) {
-    throw Error("You can't changed Book title");
+    this._title = val;
   }
   get title() {
     return this._title;
   }
   set author(val) {
-    throw Error("You can't changed Book author");
+    this._author = val;
   }
   get author() {
     return this._author;
   }
   set price(val) {
-    throw Error("You can't changed Book price");
+    if (typeof val === "number" && val > 0) {
+      this._price = val;
+    }
   }
   get price() {
     return this._price;
   }
   set quantity(val) {
-    throw Error("You can't changed Book quantity");
+    if (typeof val === "number" && val > 0) {
+      this._quantity = val;
+    }
   }
   get quantity() {
     return this._quantity;
   }
 }
 let author1 = new Author("J. K. Rowling", "abc@gmail.com", "fEmaLe");
+let book1 = new Book("js", author1, 10, 50);
 console.log(author1.gender); // female
 console.log(author1.name); // J. K. Rowling
 console.log(author1.toString()); // Ms. J. K. Rowling
-author.name = 12; 
+// author.name = 12;
+console.log(book1);
+book1.price = "12";
+console.log(book1);
+console.log(book1.getProfit());
