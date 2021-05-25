@@ -37,8 +37,9 @@ class Person {
 let user1 = new Person("Name", "Surname", "female", 23);
 console.log(user1.toString());
 
-class Student {
-  constructor(year, fee, program) {
+class Student extends Person {
+  constructor(firstName, lastName, gender, age, year, fee, program) {
+    super(firstName, lastName, gender, age);
     this._year = year;
     this._fee = fee;
     this._program = program;
@@ -62,6 +63,11 @@ class Student {
   get program() {
     return this._program;
   }
+  passExam() {}
 }
 
-let student1 = new Student();
+let student1 = new Student("Jason", "Statham", "female", 36, 2004, 580000, [
+  { programName: "math", grade: 10 },
+  { programName: "english", grade: undefined },
+]);
+console.log(student1);
