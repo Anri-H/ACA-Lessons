@@ -35,7 +35,7 @@ class Account {
     }
   }
   static identifyAccounts(accountFirst, accountSecond) {
-    return accountFirst === accountSecond;
+    return accountFirst.id === accountSecond.id;
   }
   toString() {
     return `Saving account's account balance is $${this.balance}`
@@ -57,5 +57,4 @@ console.log(cardAcc.balance); // 2000
 let anotherAcc = savingAcc;
 console.log(Account.identifyAccounts(savingAcc, anotherAcc)); // true
 console.log(Account.identifyAccounts(savingAcc, cardAcc)); // false
-console.log(savingAcc.toString()); // Saving account's account balance is
-// $1400.
+console.log(savingAcc.toString());
