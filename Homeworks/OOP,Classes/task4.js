@@ -20,11 +20,10 @@ class Book {
 }
 
 class LibraryBookBase extends Book {
-  constructor(title, author) {
+  constructor(title, author, bookId) {
     super(title, author);
+    this.bookId = bookId
   }
-
-  static bookId = Math.random();
 
   toString() {
     return `title: ${this.title}, 

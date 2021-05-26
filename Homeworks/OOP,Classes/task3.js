@@ -43,7 +43,6 @@ class Student extends Person {
     this._year = year;
     this._fee = fee;
     this._program = program;
-    this.__proto__ = Person;
   }
   set year(val) {
     this._year = val;
@@ -58,16 +57,39 @@ class Student extends Person {
     return this._fee;
   }
   set program(val) {
-    this._program = val;
+    if (val instanceof Object) {
+      this._program = val;
+    }
   }
   get program() {
     return this._program;
   }
-  passExam() {}
+
+  passExam() {
+    this.program.forEach((elem) => {
+      if (elem.grade >= 50) {
+        elem.isPassed = true;
+      }
+    });
+    return this.program;
+  }
+
+  isAllPassed() {
+    this.program.forEach((elem) => {
+      if (!elem.isPassed) {
+        return "your grade is not enough";
+      }
+    });
+    return ++this.year;
+  }
 }
 
 let student1 = new Student("Jason", "Statham", "female", 36, 2004, 580000, [
-  { programName: "math", grade: 10 },
-  { programName: "english", grade: undefined },
+  { programName: "math", grade: 54, isPassed: false },
+  { programName: "english", grade: 62, isPassed: false },
 ]);
+
+console.log(student1);
+student1.passExam();
+student1.isAllPassed();
 console.log(student1);
