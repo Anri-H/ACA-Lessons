@@ -22,7 +22,7 @@ class Book {
 class LibraryBookBase extends Book {
   constructor(title, author, bookId) {
     super(title, author);
-    this.bookId = bookId
+    this.bookId = bookId;
   }
 
   toString() {
@@ -32,8 +32,8 @@ class LibraryBookBase extends Book {
 }
 
 class LibraryBook extends LibraryBookBase {
-  constructor(title, author, quantity) {
-    super(title, author);
+  constructor(title, author, bookId, quantity) {
+    super(title, author, bookId);
     this._quantity = quantity;
   }
   set title(val) {
@@ -79,9 +79,8 @@ class ReaderBook extends LibraryBookBase {
     super(title, author);
     this._expirationDate = expirationDate;
     this._isReturned = isReturned;
+    this.bookId = Math.random();
   }
-
-  static bookId = Math.random();
 
   set title(val) {
     if (typeof val === "string") {
@@ -162,16 +161,17 @@ class Reader {
   }
 }
 
-class Library {
-  constructor(books, readers) {
+class Library extends LibraryBook {
+  constructor(title, author, expirationDate, isReturned, books, readers) {
+    super(title, author, expirationDate, isReturned);
     this._books = [books];
     this._readers = [readers];
   }
   get books() {
-    return _books;
+    return this._books;
   }
   get readers() {
-    return _readers;
+    return this._readers;
   }
   doHaveBook(request) {
     let req = JSON.stringify(request);
@@ -208,28 +208,32 @@ class Library {
   }
   checkReaderId(id) {
     for (let i = 0; i < this.books.length; i++) {
-        if (id === this.readers[i].readerId) {
-            return true;
-        } else {
-            return false;
-        }
+      if (id === this.readers[i].readerId) {
+        return true;
+      } else {
+        return false;
+      }
     }
+  }
+
+  lendBook(book) {
+    this.books.forEach((elem) => {
+      if (JSON.stringify(book) === JSON.stringify(elem)) {
+        return true;
+      }
+    });
+    return false;
+  }
 }
-}
 
-// let book1 = new Book("Sherlock Holms", "Arthur Conan Doyle");
-// console.log(book1.toString());
+let book1 = new Book("Sherlock Holms", "Arthur Conan Doyle");
+let book2 = new Book("She", "Arthur Conan Doyle");
+let libok = new LibraryBook("Sherlock Holms", "Arthur Conan Doyle", 12);
+let libBook1 = new LibraryBook("Sherlock Holms", "Arthur Conan Doyle", 12);
+let libBook2 = new LibraryBook("Sherlock Holms", "Arthur Conan Doyle", 12);
+let reed1 = new Reader("Sat", "Kars", "Sherlock", 1);
+let reed2 = new Reader("aaaaaa", "rs", "Sherlock", 2);
+let lib = new Library("Sherlock Holms", "Arthur Conan Doyle", 1, book1, reed2);
 
-// let bookBase = new LibraryBookBase("Sherlock Holms", "Arthur Conan Doyle");
-// console.log(bookBase.toString());
-// console.log(bookBase.title);
-
-// let libBook = new LibraryBook("Sherlock Holms", "Arthur Conan Doyle", 12);
-// console.log(libBook.toString());
-// console.log(libBook.title);
-
-// let reed = new Reader('Sat', 'Kars', 'Sherlock');
-// console.log(reed)
-
-// let libok = new LibraryBook('Sherlock Holms', 'Arthur Conan Doyle', 12);
-// console.log(libok.toString())
+lib.addBook(book1);
+console.log(lib);
