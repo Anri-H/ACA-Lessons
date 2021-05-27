@@ -7,6 +7,7 @@ class Shiritory {
   play(val) {
     if (!this.words.length) {
       this.words.push(val);
+      return this.words;
     }
     const lastCharacter = this.words[this.words.length - 1];
     const lastStr = lastCharacter.length - 1;
