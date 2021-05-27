@@ -4,6 +4,7 @@
 
 function getDay(date) {
   date = new Date(date);
+  console.log(date);
   const days = [
     "Sunday",
     "Monday",
