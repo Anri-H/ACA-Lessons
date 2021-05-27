@@ -5,30 +5,35 @@ class Person {
     this._gender = gender;
     this._age = age;
   }
+
   set firstName(val) {
     this._firstName = val;
   }
   get firstName() {
     return this._firstName;
   }
+
   set lastName(val) {
     this._lastName = val;
   }
   get lastName() {
     return this._lastName;
   }
+
   set gender(val) {
     this._gender = val;
   }
   get gender() {
     return this._gender;
   }
+
   set age(val) {
     this._age = val;
   }
   get age() {
     return this._age;
   }
+
   toString() {
     return `${this.firstName} ${this.lastName}, ${this.age} years old.`;
   }
@@ -44,18 +49,21 @@ class Student extends Person {
     this._fee = fee;
     this._program = program;
   }
+
   set year(val) {
     this._year = val;
   }
   get year() {
     return this._year;
   }
+
   set fee(val) {
     this._fee = val;
   }
   get fee() {
     return this._fee;
   }
+
   set program(val) {
     if (val instanceof Object) {
       this._program = val;

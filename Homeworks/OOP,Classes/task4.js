@@ -3,15 +3,19 @@ class Book {
     this._title = title;
     this._author = author;
   }
+
   get title() {
     return this._title;
   }
+
   get author() {
     return this._author;
   }
+
   toString() {
     return `title: ${this.title}, author: ${this.author}`;
   }
+
   isTheSameBook(book) {
     if (this.title === book.title && this.author === book.author) {
       return true;
@@ -36,6 +40,7 @@ class LibraryBook extends LibraryBookBase {
     super(title, author, bookId);
     this._quantity = quantity;
   }
+
   set title(val) {
     if (typeof val === "string") {
       this._title = val;
@@ -53,6 +58,7 @@ class LibraryBook extends LibraryBookBase {
   get author() {
     return this._author;
   }
+
   set quantity(val) {
     if (typeof val === "number" && !isNaN()) {
       this._quantity = val;
@@ -61,14 +67,17 @@ class LibraryBook extends LibraryBookBase {
   get quantity() {
     return this._quantity;
   }
+
   toString() {
     return `title: ${this.title},
     author: ${this.author},
     quantity: ${this.quantity}`;
   }
+
   increaseQuantityBy(amount) {
     this.quantity += amount;
   }
+
   decreaseQuantityBy(amount) {
     this.quantity -= amount;
   }
@@ -90,6 +99,7 @@ class ReaderBook extends LibraryBookBase {
   get title() {
     return _title;
   }
+
   set author(val) {
     if (typeof val === "string") {
       this._author = val;
@@ -107,6 +117,7 @@ class ReaderBook extends LibraryBookBase {
   get expirationDate() {
     return _expirationDate;
   }
+
   set isReturned(val) {
     if (typeof val === "boolean") {
       this._isReturned = val;
@@ -115,6 +126,7 @@ class ReaderBook extends LibraryBookBase {
   get isReturned() {
     return this._isReturned;
   }
+
   toString() {
     return `title: ${this.title},
     author: ${this.author},
@@ -139,6 +151,7 @@ class Reader {
   get firstName() {
     return this._firstName;
   }
+
   set lastName(val) {
     if (typeof val === "string") {
       this._lastName = val;
@@ -147,6 +160,7 @@ class Reader {
   get lastName() {
     return this._lastName;
   }
+
   set books(val) {
     this._books = val;
   }
@@ -167,12 +181,14 @@ class Library extends LibraryBook {
     this._books = [books];
     this._readers = [readers];
   }
+
   get books() {
     return this._books;
   }
   get readers() {
     return this._readers;
   }
+
   doHaveBook(request) {
     let req = JSON.stringify(request);
     for (let i = 0; i < this.books.length; i++) {
@@ -183,6 +199,7 @@ class Library extends LibraryBook {
       return false;
     }
   }
+
   addBook(newBook) {
     let book = JSON.stringify(newBook);
     for (let i = 0; i < this.books.length; i++) {
@@ -194,6 +211,7 @@ class Library extends LibraryBook {
       }
     }
   }
+
   addBooks(newBook) {
     let book = JSON.stringify(newBook);
     for (let i = 0; i < this.books.length; i++) {
@@ -206,6 +224,7 @@ class Library extends LibraryBook {
     }
     return this.books;
   }
+
   checkReaderId(id) {
     for (let i = 0; i < this.books.length; i++) {
       if (id === this.readers[i].readerId) {
