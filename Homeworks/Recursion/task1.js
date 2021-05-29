@@ -1,14 +1,17 @@
 //Write a recursive function to determine whether all digits of the number are odd or not.
 
 function allDigitsOdd(num) {
-  num1 = `${num}`.split("");
-  if (num1[0] % 2 === 0) {
+  if (typeof num === "number") {
+    return allDigitsOdd(`${num}`.split(""));
+  }
+  if (num[0] % 2 === 0) {
     return false;
   }
-  if (num1.length === 1) {
+  if (num.length === 1) {
     return true;
   }
-  return allDigitsOdd(num1.unshift());
+  num.shift();
+  return allDigitsOdd(num);
 }
 
-console.log(allDigitsOdd(79519));
+console.log(allDigitsOdd(79519132));
