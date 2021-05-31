@@ -9,8 +9,16 @@ class Shiritory {
       this.words.push(val);
       return this.words;
     }
+
     const lastCharacter = this.words[this.words.length - 1];
     const lastStr = lastCharacter.length - 1;
+    for (let i = 0; i < this.words.length; i++) {
+      const el = this.words[i];
+      if (el === val) {
+        this.game_over = true;
+        return "game over";
+      }
+    }
     if (val[0] === lastCharacter[lastStr]) {
       this.words.push(val);
       return this.words;
