@@ -4,10 +4,17 @@
 
 function sumOfDigits(num) {
   if (typeof num === "number") {
-    num = `${num}`.split("");
+    num = `${num}`;
   }
   let sum = 0;
-  num.forEach((el) => {
-    sum += el;
-  });
+  for (let i = 0; i < num.length; i++) {
+    const el = num[i];
+    sum += +el;
+  }
+  if (sum > 9) {
+    return sumOfDigits(sum);
+  }
+  return sum;
 }
+
+console.log(sumOfDigits(93));
