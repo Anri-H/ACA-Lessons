@@ -19,6 +19,6 @@ function minPositive(arr) {
   return min(arr);
 }
 
-console.log(minPositive([56, -9, 87, -23, 0, -105, 55, 1]));
+console.log(minPositive([-56, -9, -87, -23, -1, -105, -55, 1]));
 console.log(minPositive([45, -9, 15, 5, -78]));
 console.log(minPositive([-5, -9, -111, -1000, -7]));
