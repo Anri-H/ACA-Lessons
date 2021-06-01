@@ -10,5 +10,5 @@ function addBrackets(str, i = 0, last = str.length - 1) {
   return str[i] + "(" + addBrackets(str, i + 1, last - 1) + ")" + str[last];
 }
 
-let s = "LItBeoFLcSGBOFQxMHoIuDDWcqcVgkcRoAseocXO";
+let s = "LItBeoFLcSGBOFQxMHoIuDDWcqcVhgkRoseocXO";
 console.log(addBrackets(s));
