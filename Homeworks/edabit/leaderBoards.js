@@ -1,6 +1,6 @@
 function leaderboards(arr) {
- return arr.sort((a = a.score + a.reputation * 2, b = b.score + b.reputation * 2) => {
-   console.log( a - b);
+  return arr.sort((a, b) => {
+    return (b.reputation * 2 + b.score) - (a.reputation * 2 + a.score);
   });
 }
 
