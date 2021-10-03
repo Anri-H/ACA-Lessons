@@ -16,7 +16,7 @@ I'm learning front end development
 
 - [Intro to Functions](./Homeworks/IntroToFunctions)
 
-- [Scope and Closure](./Homeworks/Closure)
+- [Recursion](./Homeworks/Recursion)
 
 - [Type Coercion for Primitives](./Homeworks/TypeCoercionforPrimitives)
 
@@ -33,3 +33,9 @@ I'm learning front end development
 - [Prototype, This, New](./Homeworks/Prototype,This,New)
 
 - [OOP, Classes](./Homeworks/OOP,Classes)
+
+- [Timer](./Homeworks/Timer)
+
+- [TicTacToe](./Homeworks/TicTacToe)
+
+- [Edabit](./Homeworks/edabit)
